@@ -31,6 +31,7 @@ The app should look like below on your device:
 ![](screenrecording.mp4)
 
 ![](screenshot.jpeg)
+
 **NOTE:**
 - Main files being used are **index.js**, **package.json**, **build.gradle**, **shared.js** inside build folder and **App.kt** with our app code.
 - **build.gradle** file has some manual setup when it comes to using resources. Files are copied during gradle assemble task.
