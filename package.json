@@ -10,9 +10,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "kotlin": "1.4.10",
-    "react": "16.13.1",
-    "react-native": "0.63.3"
+    "kotlin": "1.4.21",
+    "react": "17.0.0",
+    "react-native": "0.63.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
