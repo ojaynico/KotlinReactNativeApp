@@ -32,17 +32,17 @@ kotlin {
     }
 }
 
+// Delete package.json in build directory to prevent jest-haste-map: Haste module naming collision error
 task("deletePackages") {
     doLast {
-        delete("build/js/packages/shared/package.json")
-        delete("build/js/package.json")
-        delete("build/js/packages_imported/kotlin/1.4.10/package.json")
-        delete("build/js/packages_imported/kotlin/1.3.72/package.json")
-        delete("build/js/packages_imported/kotlin-wrappers-kotlin-react-jsLegacy/1.0.0-SNAPSHOT/package.json")
-        delete("build/tmp/expandedArchives/kotlin-react-16.13.1-pre.120-kotlin-1.4.10.jar_c72db421223d4484036541e379b08c49/package.json")
+        delete(fileTree("build").matching {
+            exclude("**/node_modules")
+            include("**/package.json")
+        })
     }
 }
 
+// Copy resources from resources during assemble task
 tasks {
     assemble {
         copy {
